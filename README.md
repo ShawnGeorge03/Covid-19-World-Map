@@ -5,4 +5,4 @@ This is a simple COVID-19 Case maps. For both these maps I am using the <a href=
 
 <img src="./Time Series Covid 19 Map/Dynamic Covid 19 Map.gif" alt="Dynamic COVID 19 Map"/>
 
-![alt text](https://github.com/[ShawnGeorge03]/[Covid-19-World-Map]/blob/[master]/Time Series Covid 19 Map/Dynamic Covid 19 Map.gif?raw=true)
+![](https://github.com/[ShawnGeorge03]/[Covid-19-World-Map]/blob/[master]/Time-Series-Covid-19-Map/Dynamic-Covid-19-Map.gif?raw=true)
