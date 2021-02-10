@@ -1,11 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# ### Import Libraries
-
-# In[1]:
-
-
 import pandas as pd
 import requests
 import io
@@ -22,8 +14,7 @@ data = pd.read_csv(io.StringIO(download.decode('utf-8')))
 data = data.groupby('Country/Region').sum()
 data = data.drop(columns= ['Lat', 'Long'])
 
-world = gpd.read_file(r'./Mapping_Resource\World_Map.shp')
-world
+world = gpd.read_file(r'./Mapping_Resource/World_Map.shp')
 
 world.replace('Viet Nam', 'Vietnam', inplace = True)
 world.replace('Brunei Darussalam', 'Brunei', inplace = True)
