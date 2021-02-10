@@ -9,8 +9,8 @@ import pathlib
 
 url = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv"
 download = requests.get(url).content
-data = pd.read_csv(io.StringIO(download.decode('utf-8')))
 
+data = pd.read_csv(io.StringIO(download.decode('utf-8')))
 data = data.groupby('Country/Region').sum()
 data = data.drop(columns= ['Lat', 'Long'])
 
@@ -38,7 +38,6 @@ world.replace('Holy See (Vatican City)', 'Holy See', inplace = True)
 world.replace('Micronesia, Federated States of', 'Micronesia', inplace = True)
 
 merged = world.join(data, on='NAME', how='right')
-merged
 
 del url
 del download
@@ -72,7 +71,9 @@ for dates in merged.columns.to_list()[2:len(merged.columns.to_list())]:
         ax.get_legend().set_bbox_to_anchor((0.18, 0.6))
 
         img = ax.get_figure()   
-        img.savefig("./Covid-Time-Pictures/img-" + dates.replace("/","-") + ".png", format = 'png', bbox_inches='tight')
+        img.savefig("./Covid-Time-Pictures/img-" + dates.replace("/","-") + ".png", 
+                    format = 'png', 
+                    bbox_inches='tight')
         ax.clear()
         plt.close(img)
         del ax
