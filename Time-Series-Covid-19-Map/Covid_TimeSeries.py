@@ -58,7 +58,7 @@ for dates in merged.columns.to_list()[2:len(merged.columns.to_list())]:
                          legend = True,
                          scheme = 'user_defined',
                          classification_kwds = {
-                             'bins': [10, 100, 500, 1000, 10000, 500000, 1000000, 10000000, 15000000, 20000000]},
+                             'bins': [100, 500, 1000, 10000, 500000, 1000000, 10000000, 15000000, 20000000]},
                          edgecolor = 'black',
                          linewidth = 0.4)
 
